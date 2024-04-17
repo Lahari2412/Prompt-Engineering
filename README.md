@@ -35,7 +35,7 @@
   * [Multimodal CoT](#Multimodal-CoT)
 
 
-### Introduction
+### **Introduction**
 ------------
 
 - Prompt engineering involves the systematic design, optimization, and refinement of prompts to effectively utilize language models (LMs) for various tasks and applications.
@@ -45,14 +45,15 @@
 - Researchers utilize prompt engineering to enhance LLMs' performance across a wide array of tasks, including question answering and arithmetic reasoning.
 - Developers leverage prompt engineering techniques to design robust and efficient prompting methods that seamlessly interface with LLMs and other tools.
 
+![alt text](images/intro1.jpeg)
 
-### LLM Settings
+### **LLM Settings**
 -------------
 - "LLM settings" likely refers to "Large Language Model settings."
 
 - These settings pertain to various parameters and techniques used when working with large language models like GPT-3 for prompt engineering.
 
-- Let's explore some important LLM settings for effective prompt engineering:
+**Let's explore some important LLM settings for effective prompt engineering:**
 
 - **Temperature**: This parameter affects the randomness of the model's outputs. Lower values make the model more deterministic, while higher values introduce more randomness and diversity in responses. Lower temperatures are useful for fact-based tasks like question answering, while higher temperatures are suitable for creative tasks like poem generation.
 
@@ -68,18 +69,19 @@
 
 The general recommendation is to adjust temperature or top P, and either frequency penalty or presence penalty, but not both simultaneously.
 
+![alt text](images/LLM-setting.png)
 
-### Basics of Prompting
+### **Basics of Prompting**
 ------------------------
 
 * Prompting an LLM
 * Prompt Formatting
 
-#### Prompting an LLM
+#### **Prompting an LLM**
 
 - You can achieve a lot with simple prompts, but the quality of results depends on how much information you provide it and how well-crafted the prompt is. A prompt can contain information like the instruction or question you are passing to the model and include other details such as context, inputs, or examples. You can use these elements to instruct the model more effectively to improve the quality of results.
 
-- Let's get started by going over a basic example of a simple prompt:
+ **Let's get started by going over a basic example of a simple prompt:**
 
 Prompt:
 
@@ -95,7 +97,7 @@ blue.
 
 You can observe from the prompt example above that the language model responds with a sequence of tokens that make sense given the context "The sky is". The output might be unexpected or far from the task you want to accomplish. In fact, this basic example highlights the necessity to provide more context or instructions on what specifically you want to achieve with the system. This is what prompt engineering is all about.
 
-Let's try to improve it a bit:
+**Let's try to improve it a bit:**
 
 Prompt:
 
@@ -115,7 +117,7 @@ blue during the day and dark at night.
 
 The example above is a basic illustration of what's possible with LLMs today. Today's LLMs are able to perform all kinds of advanced tasks that range from text summarization to mathematical reasoning to code generation.
 
-#### Prompt Formatting
+#### **Prompt Formatting**
 
 You have tried a very simple prompt above. A standard prompt has the following format:
 
@@ -140,16 +142,16 @@ A:
 
 When prompting like the above, it's also referred to as zero-shot prompting, i.e., you are directly prompting the model for a response without any examples or demonstrations about the task you want it to achieve. Some large language models have the ability to perform zero-shot prompting but it depends on the complexity and knowledge of the task at hand and the tasks the model was trained to perform good on.
 
-A concrete prompt example is as follows:
+**A concrete prompt example is as follows:**
 
-Prompt
+**Prompt**
 
 Q: What is prompt engineering?
 
 
 With some of the more recent models you can skip the "Q:" part as it is implied and understood by the model as a question answering task based on how the sequence is composed. In other words, the prompt could be simplified as follows:
 
-Prompt
+**Prompt**
 
 What is prompt engineering?
 
@@ -202,7 +204,7 @@ Negative
 Few-shot prompts enable in-context learning, which is the ability of language models to learn tasks given a few demonstrations. We discuss zero-shot prompting and few-shot prompting more extensively in upcoming sections.
 
 
-### Prompt Elements
+### **Prompt Elements**
 -----------------
 
 A prompt contains any of the following elements:
@@ -215,8 +217,11 @@ A prompt contains any of the following elements:
 
 - **Output Indicator** - the type or format of the output.
 
+![alt text](images/elements-of-prompt.png)
 
-### General Tips for Designing Prompts
+
+
+### **General Tips for Designing Prompts**
 --------------------------------
 
 - [Be clear and specific](#be-specific-and-clear)
@@ -227,8 +232,9 @@ A prompt contains any of the following elements:
 - [Handle Edge cases and errors](#handle-edge-cases-and-errors)
 - [Iterative Refinement](#iterative-refinement)
 
+![alt text](images/tips.png)
 
-#### Be Specific and Clear
+#### **Be Specific and Clear**
 
 Clearly state the task, input, and expected output. Avoid ambiguity in your instructions.
 
@@ -243,7 +249,7 @@ Write a Python function named 'calculate_sum' that takes two numbers as input an
 
 ```
 
-#### Break Down the Task
+#### **Break Down the Task**
 
 Divide the task into smaller steps and guide the AI through each step.
 
@@ -262,7 +268,7 @@ Step 5: Return 'reversed_str' at the end of the function.
 
 ```
 
-#### Use Input-Output Examples
+#### **Use Input-Output Examples**
 
 Provide examples to illustrate the desired behavior of the code.
 
@@ -285,7 +291,7 @@ Output: 12
 
 ```
 
-#### Incorporate Context and Constraints
+#### **Incorporate Context and Constraints**
 
 Include relevant context or constraints for the task.
 
@@ -300,7 +306,7 @@ Write a Python program that generates a list of the first 10 prime numbers. You 
 
 ```
 
-#### Discuss Approaches and Ask for User Input
+#### **Discuss Approaches and Ask for User Input**
 
 Engage in a conversation with the AI, discussing possible approaches and asking for its input.
 
@@ -318,7 +324,7 @@ AI: That's a good approach! Let's start by defining the function...
 
 ```
 
-#### Handle Edge Cases and Errors
+#### **Handle Edge Cases and Errors**
 
 Include instructions for handling edge cases and errors.
 
@@ -333,7 +339,7 @@ Write a Python function named 'divide_numbers' that takes two numbers as input a
 
 ```
 
-#### Iterative Refinement
+#### **Iterative Refinement**
 
 Iterate and refine your prompt based on AI responses. If the generated code isn't satisfactory, adjust the prompt to provide clearer guidance.
 
@@ -356,7 +362,7 @@ By applying these tips and continuously refining your prompts based on AI respon
 Remember that prompt engineering is an iterative process, and experimenting with different styles and techniques will help you find the most effective approach for your specific tasks.
 
 
-### Techniques
+### **Techniques**
 ----------------------
 
 - [Zero-shot Prompting](#Zero-shot-Prompting)
@@ -371,12 +377,14 @@ Remember that prompt engineering is an iterative process, and experimenting with
 - [Multimodal CoT](#Multimodal-CoT)
 
 
+![alt text](images/techniques.png)
 
-#### Zero-shot Prompting
+#### **Zero-shot Prompting**
 
 - Zero-shot prompting refers to a technique in natural language processing where a pre trained model is asked to generate text without being provided with any specific examples or prompts during training. Instead, the model is expected to generate coherent responses based on a general understanding of language and the task at hand.
 
 - This technique can be applied to various tasks, such as translation, summarization, question answering, and more. 
+![alt text](images/zero-shot.jpeg)
 
 **Example: Using Zero-Shot Prompting for Text Classification**
 
@@ -408,13 +416,15 @@ In this example, you provided a single prompt that instructs the model to classi
 - `Not Task-Specific:` The model's responses may not be as specialized as those of task-specific models, but it's a versatile approach.
 
 
-#### Few-shot Prompting
+#### **Few-shot Prompting**
 
 - Few-shot prompting is a technique that builds upon the principles of zero-shot prompting but provides the model `with a few examples` to give it a better understanding of the desired task.
 
 - Few-shot prompting involves utilizing a pre-trained language model to perform tasks with only a small amount of task-specific examples or prompts, rather than a large corpus of training data.
 
 - Instead of relying solely on its pre-existing knowledge, the model is guided by a small number of input-output pairs.
+
+![alt text](images/few-shot.png)
 
 **Example: Using Few-Shot Prompting for Language Translation**
 
@@ -457,10 +467,12 @@ In this example, you provided a few-shot prompt with three examples of English-F
 - `Balancing Examples:` Providing a few diverse examples helps the model learn the task while avoiding overfitting.
 
 
-#### Chain-of-Thought Prompting
+#### **Chain-of-Thought Prompting**
 
 - Chain of thought prompting involves sequentially providing a series of prompts or cues to guide a conversation or narrative generated by a language model. 
 - Each prompt builds upon the context and information provided by the previous prompts, allowing for more coherent and focused interactions.
+
+![alt-text](images/chain-of-thought.png)
 
 **Example: Generating Python Code for a Calculator**
 
@@ -545,11 +557,13 @@ In this example, you used a Chain-of-Thought prompt to guide the AI model throug
 - `Iterative Refinement:` You can iteratively refine the prompts in the chain based on the AI's responses to ensure accurate and desired output.
 
 
-#### Self-Consistency
+#### **Self-Consistency**
 
 - Self-Consistency Prompting is a technique that involves repeatedly asking an AI model to provide examples or correct its own outputs. 
 
 - By guiding the model to improve its responses based on its own previous answers, you can enhance the accuracy and consistency of generated content.
+
+![alt text](images/self-consistency.jpg)
 
 **Example:Generating Python Codefor arithmetic reasoning**
 
@@ -620,7 +634,7 @@ Computing for the final answer involves a few steps (check out the paper for the
 
 - `Enhanced Control: `Self-Consistency Prompting gives you greater control over the generated content by directing the model's corrections.
 
-#### Tree of Thoughts
+#### **Tree of Thoughts**
 
 - Tree of thoughts(ToT) involves structuring prompts in a hierarchical manner to guide a language model's generation of responses along multiple branches or paths of thought.
 
@@ -629,6 +643,8 @@ Computing for the final answer involves a few steps (check out the paper for the
 - This technique enables the generation of rich and diverse narratives or conversations by providing the model with structured guidance on different aspects or subtopics to explore.
 
 - This technique is particularly useful for complex tasks that require multiple layers of guidance.
+
+![alt text](images/tree-of-thoughts.png)
 
 **Example: Using Tree of Thoughts for Developing a Python Game**
 
@@ -674,7 +690,7 @@ In this example, you used the Tree of Thoughts technique to guide the AI model t
 - `Interactive Development:` The back-and-forth interaction resembles a collaborative development process, ensuring key components are covered.
 
 
-#### Automatic Reasoning and Tool
+#### **Automatic Reasoning and Tool**
 
 - Automatic Reasoning and Tool-use (ART) prompting involves formulating prompts in a manner that encourages a language model to demonstrate abilities related to logical reasoning and tool usage without explicit training on these tasks.
 
@@ -682,6 +698,8 @@ In this example, you used the Tree of Thoughts technique to guide the AI model t
 
 - ART prompting aims to evaluate the model's capacity for abstract reasoning and practical problem-solving skills in various domains.
 
+
+![alt text](images/ART.png)
 
 **Example: Using ART for Debugging Python Code**
 
@@ -732,11 +750,14 @@ In this example, you used the ART technique to instruct the AI model to analyze 
 
 - `Educational Value:` This technique can provide insights into debugging processes and improve programming skills.
 
-#### Directional Stimulus/instructional Prompting
+#### **Directional Stimulus/instructional Prompting**
 
 - Directional Stimulus Prompting is a technique where you provide a stimulus or input that guides the AI's response in a specific direction. 
 
 - This technique can be useful for steering the AI's focus and encouraging it to generate desired outcomes.
+
+
+![alt text](images/Directional-stimulus.png)
 
 **Example: Using Directional Stimulus for Python Code Optimization**
 
@@ -785,11 +806,13 @@ In this example, you used Directional Stimulus Prompting to guide the AI model t
 
 - `Precision and Control:` This technique gives you greater control over the AI's output, ensuring it generates content that aligns with your objectives.
 
-#### ReAct Prompting 
+#### **ReAct Prompting**
 
 - The React Prompting technique involves having a back-and-forth interaction with the AI model, where you provide feedback or react to its responses. 
 
 - This technique allows you to guide the AI's output through iterative refinement based on your reactions. 
+
+![alt text](images/ReAct.png)
 
 **Example: Using React Prompting for Python Function Enhancement**
 
@@ -842,11 +865,13 @@ return sum(num for num in numbers if num % 2 == 0)
 
 `Fine-Tuning and Customization:` React prompting enables you to fine-tune the AI's responses to suit your specific needs.
 
-#### Multimodal CoT Prompting
+#### **Multimodal CoT Prompting**
 
 - The Multimodal Chain-of-Thought (CoT) Prompting technique extends the traditional CoT approach by allowing the integration of both text and images to guide the AI's responses. 
 
 - This technique is particularly useful for tasks that involve a combination of textual and visual information.
+
+![alt text](images/Multimodal-COT.png)
 
 **Example: Using Multimodal CoT for Image Captioning with Python Code**
 
